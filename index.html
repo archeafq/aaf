@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>ArcheAgeクイズ</title>
+  <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1 class="header-title">ArcheAgeクイズ</h1>
+  </header>
+
+  <main>
+    <div id="quiz-container">
+      <div id="start-screen">
+        <h2>ArcheAgeクイズに挑戦！</h2>
+        <div class="difficulty-buttons">
+          <button class="difficulty-btn world" data-level="world">世界観編</button>
+          <button class="difficulty-btn game" data-level="game">ゲーム編</button>
+        </div>
+      </div>
+
+      <div id="quiz-screen" style="display:none">
+        <h2 id="question-number">問題番号</h2>
+        <p id="question-text">ここに問題文が表示されます</p>
+        <div id="answer-buttons"></div>
+      </div>
+
+      <div id="result-screen" style="display:none;">
+        <div class="result-screen-container">
+          <div class="result-summary">
+            <h2 id="result-title">クイズ結果</h2>
+            <p id="score">
+              <span class="correct">0</span><span class="unit">問</span>
+              <span class="slash"> / </span>
+              <span class="total">10</span><span class="unit">問</span>
+            </p>
+            <div class="result-buttons">
+              <button id="post-result">
+                <img src="x-icon.png" alt="Xアイコン" class="icon">
+                結果をポストする
+              </button>
+            </div>
+          </div>
+          <ul class="result-explanations" id="explanation-list"></ul>
+          <div class="back-to-top" style="margin-top: 30px; display:flex; justify-content:center;">
+            <button id="back-to-top-btn">TOPに戻る</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p style="text-align:center; margin:0; line-height:1.4; color:gray;">
+      © 2025 ArcheAgeクイズ<br>
+      ArcheAge ® is a registered trademark of XLGAMES Inc.
+    </p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

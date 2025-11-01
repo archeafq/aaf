@@ -136,7 +136,7 @@ function showResult() {
 const postResultBtn = document.getElementById('post-result');
 postResultBtn.addEventListener('click', () => {
   const selectedCategory = document.querySelector('.difficulty-btn.selected')?.textContent || '';
-  const postText = `▌ ArcheAgeクイズに挑戦！ ▌\n\n${selectedCategory}で【${score}問】正解！\n\n▼クイズに挑戦\n(Link)\n\n#ArcheAge #ArcheAgeJP #アーキエイジ`;
+  const postText = `▌ ArcheAgeクイズに挑戦！ ▌\n\n${selectedCategory}で【${score}問】正解！\n\n▼クイズに挑戦\nhttps://www.aafq.jp/\n\n#ArcheAge #ArcheAgeJP #アーキエイジ`;
   const encodedText = encodeURIComponent(postText);
   const twitterUrl = `https://twitter.com/intent/tweet?text=${encodedText}`;
   window.open(twitterUrl, '_blank', 'width=600,height=400');
